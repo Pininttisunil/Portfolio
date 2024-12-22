@@ -1,0 +1,631 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  margin: 10px;
+  box-sizing: border-box;
+}
+/* Typing effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333;
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  50% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.about-me {
+  margin-left: 130px;
+  padding: 10;
+  animation: slideInFromLeft 1.5s ease;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 5.0rem;  /* Adjust the font size as needed */
+  color: #3498db;
+  font-weight: bold;
+}
+.about-me h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+
+#typing-text {
+  font-size: 2rem;  /* Increased font size */
+  color: black;  /* Default color */
+  font-family: 'Arial', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #333;
+  animation: typing 4s steps(40, end), blink-caret 0.5s step-end infinite;
+  display: inline-block;
+  margin-right: 30px; /* Add space between text and profile image */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #333; }
+}
+.collage-name {
+  text-align: center; /* Center the image horizontally */
+}
+
+.collage-image {
+  width: 150px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+.dot-text::before {
+  content: "•"; /* Adds the dot */
+  margin-right: 10px; /* Adds space between the dot and the text */
+  font-size: 20px; /* You can adjust the size of the dot */
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;  /* Space between the logos */
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 40px;  /* Adjust size of the icons */
+  height: 40px;
+  transition: transform 0.3s ease;  /* Smooth transition on hover */
+}
+
+.social-icon:hover {
+  transform: scale(1.1);  /* Slight zoom effect on hover */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+.download-btn {
+  text-decoration: none; /* Remove the default link underline */
+}
+
+.download-btn button { /* Green background */
+  color: rgb(16, 13, 13);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn button:hover {
+  background-color: #782479; /* Darker green on hover */
+}
+
+.download-btn button:focus {
+  outline: none; /* Remove the default outline when clicked */
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects {
+    flex-direction: column;
+  }
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+header h1 {
+  text-align: center;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  margin: 0 1rem;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Updated About Section */
+.about-content {
+  display: flex;  /* Use flexbox to align text and image horizontally */
+  align-items: center;  /* Vertically center the content */
+  justify-content: flex-start;  /* Align content to the left side */
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin-right: 20px;  /* Add some space between the text and the profile image */
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #f4a261;
+  margin-left: 15px;
+  animation: pulse 2s infinite;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;  /* Make the image circular */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Typing effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: rgb(19, 18, 17);
+  }
+  50% {
+    border-color: #333;
+  }
+}
+
+/* Applying animations with durations */
+.element {
+  animation: pulse 1s ease-in-out infinite, blink-caret 0.75s step-end infinite;
+}
+
+
+/* Side Navigation */
+.side-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background: #a58c8c;
+  padding: 1rem;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav ul li {
+  margin: 1rem 0;
+}
+
+.side-nav ul li a {
+  color: #ab6b6b;
+  text-decoration: none;
+}
+
+/* Additional Styling */
+.project {
+  margin: 2rem 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: black;
+  background: linear-gradient(to right, #8c6fab, #697891);
+  animation: gradientAnimation 10s ease infinite;
+  background-size: 400% 400%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+header h1 {
+  font-size: 2rem;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+header nav ul li a:hover {
+  color: #f4a261;
+}
+
+/* About Section */
+#about {
+  text-align: center;
+  padding: 2rem 0;
+  animation: slideInFromLeft 1.5s ease;
+}
+#about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+#experience {
+  padding: 2rem 0;
+  background-color: #f4f4f4;
+  text-align: center;
+  animation: slideInFromLeft 1.5s ease;
+}
+
+#experience h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+#experience {
+  border: 2px solid #000; /* Adds a black border */
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f9ddf6;
+  border-radius: 10px; /* Optional: to round the corners */
+}
+
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-list li {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.experience-list h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.experience-list p {
+  color: #555;
+}
+
+.experience-list p strong {
+  font-weight: bold;
+}
+.small-logo {
+  width: 100px; /* Adjust width as needed */
+  height: 50px; /* Maintain aspect ratio */
+}
+
+
+/* Skills Section */
+#skills {
+  background-color: #f0cce3;
+  text-align: center;
+  padding: 2rem 0;
+}
+#skills {
+  border: 2px solid #000; /* Adds a black border */
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px; /* Optional: to round the corners */
+}
+
+
+#skills h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+  margin-left: 20px;
+  transition: transform 0.3s;
+  animation: bounceIn 1s ease;
+}
+
+.skill img:hover {
+  transform: scale(1.2);
+}
+
+.skill p {
+  font-weight: bold;
+}
+
+/* Projects Section */
+#projects {
+  padding: 2rem 0;
+  text-align: center;
+}
+#projects {
+  border: 2px solid #000; /* Adds a black border */
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px; /* Optional: to round the corners */
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.project {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  animation: fadeIn 1.5s ease;
+}
+
+.project img {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+#projects, #contact {
+  border: 2px solid #000; /* Adds a black border */
+  padding: 20px;
+  margin: 20px 0;
+  background-color: white; /* Sets the background color inside the border to white */
+  border-radius: 10px; /* Optional: to round the corners */
+}
+#projects {
+  border: 2px solid #000; /* Adds a black border */
+  padding: 20px;
+  margin: 20px 0;
+  background-color: rgb(224, 195, 219); /* Sets the background color inside the border to white */
+  border-radius: 10px; /* Optional: to round the corners */
+}
+/* Basic table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td {
+  background-color: #fafafa;
+}
+
+/* Optional: Add hover effect for rows */
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.projects {
+  display: flex; /* Enables flexbox for horizontal layout */
+  gap: 20px; /* Adds spacing between the project items */
+  flex-wrap: wrap; /* Ensures projects move to the next line if needed */
+}
+.project-buttons {
+  margin-top: 15px;
+  margin-left: 60px;
+  padding-left: 0%;
+  display: flex; /* Align buttons side by side */
+  gap: 10px; /* Add space between the buttons */
+}
+
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.demo-btn {
+  background-color: #4CAF50; /* Green for View Demo */
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.source-btn {
+  background-color: #008CBA; /* Blue for Source Code */
+  color: white;
+  border: 1px solid #008CBA;
+}
+
+.btn:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.demo-btn:hover {
+  background-color: rgba(24, 41, 124, 0); /* Darker green for hover */
+}
+
+.source-btn:hover {
+  background-color: #007bb5; /* Darker blue for hover */
+}
+
+
+.project {
+  flex: 1; /* Ensures each project takes equal space */
+  min-width: 250px; /* Ensures each project has a minimum width */
+  max-width: 300px; /* Limits the maximum width */
+  border: 1px solid #ccc; /* Adds a light border around each project */
+  padding: 10px;
+  background-color: #f9f9f9; /* Light background color for individual projects */
+  border-radius: 8px; /* Rounded corners for individual project containers */
+}
+
+.project img {
+  width: 100%; /* Makes the image fit the width of the project container */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.project h3 {
+  margin-top: 10px;
+}
+
+/* Education Section */
+#education {
+  padding: 2rem 0;
+  background-color: #eedfe9;
+  text-align: center;
+  animation: slideInFromRight 1.5s ease;
+}
+#education {
+  border: 2px solid #000; /* Adds a black border */
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px; /* Optional: to round the corners */
+}
+
+#education h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.education-list {
+  list-style: none;
+}
+
+.education-list li {
+  margin-bottom: 1.5rem;
+}
+
+.education-list h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-list p {
+  color: #555;
+}
+
+/* Contact Section */
+#contact {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #e5cde7;
+  animation: fadeIn 1.5s ease;
+}
+#contact {
+  border: 2px solid #000; /* Adds a black border */
+  padding: 20px;
+  color: #11030a;
+  margin: 20px 0;
+  border-radius: 10px; /* Optional: to round the corners */
+}
+
+
+#contact a {
+  color: #11030a;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+#contact a:hover {
+  color: #1a1918;
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
